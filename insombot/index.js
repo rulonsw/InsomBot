@@ -3,6 +3,7 @@ var env = require('../config.json'),
     Imgur = require('./Imgur.js'),
     Giphy = require('./Giphy.js'),
     Urban = require('./Urban.js');
+    Srd = require('./Srd.js');
 
 var InsomBot = function () {
     this.keywords = env.keywords;
@@ -10,6 +11,7 @@ var InsomBot = function () {
     this.Imgur = new Imgur;
     this.Giphy = new Giphy;
     this.Urban = new Urban;
+    this.Srd = new Srd;
 };
 
 InsomBot.prototype.loadKeywords = function ()
