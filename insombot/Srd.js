@@ -40,7 +40,7 @@ var term = message.content.substring(searchIndex + keyword.length).trim();
     callback('Searching for feat \"' + term + '\". http://www.d20srd.org/srd/feats.htm\#' +term)
   }
   else if (term.search('xp') !== -1) {
-    callback('Searching for experience table. http://www.d20srd.org/srd/xp.htm')
+    callback('https://s16.postimg.org/xq84n6hud/XP_table_3_5_d20srd.png')
   }
   else { var term2 = term.replace(/\s/g, "\%20");
   callback('Term not recognized. Searching for term \"' + term + '\".http://www.d20srd.org/search.htm?q=' + term2);}
