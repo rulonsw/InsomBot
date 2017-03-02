@@ -39,7 +39,7 @@ var term = message.content.substring(searchIndex + keyword.length).trim();
     term = term.replace(/\s/g, '');
     callback('Searching for feat \"' + term + '\". http://www.d20srd.org/srd/feats.htm\#' +term)
   }
-  else if (term.search(/\sxp$/g) !== -1) {
+  else if (term.search(/xptable/g) !== -1) {
     callback('https://s16.postimg.org/xq84n6hud/XP_table_3_5_d20srd.png')
   }
   else { var term2 = term.replace(/\s/g, "\%20");
