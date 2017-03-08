@@ -21,19 +21,22 @@ SrdModule.prototype.Message = function (keyword, message, callback) {
       -srd20.characterclass
   */
 var term = message.content.substring(searchIndex + keyword.length).trim();
-  if (term.search(/\sclass\s/g) !== -1) {
+  if (term.search(/class\s/g) !== -1) {
     term = term.replace('class', '').trim();
     term = camelize(term);
     term = term.replace(/\s/g, '');
     callback('Searching for class \"' + term + '\". http://www.d20srd.org/srd/classes/'+term+'.htm')
   }
-  else if (term.search(/\sspell\s/g) !== -1) {
+  else if (term.search(/spell\s/g) !== -1) {
     term = term.replace('spell', '').trim();
     term = camelize(term);
     term = term.replace(/\s/g, '');
     callback('Searching for spell \"' + term + '\". http://www.d20srd.org/srd/spells/'+term+'.htm')
   }
-  else if (term.search(/\sfeat\s/g) !== -1) {
+  else if (term.search(/spells/g) !== -1) {
+     callback('Spell table found. http://www.d20srd.org/indexes/spells.htm');
+  }
+  else if (term.search(/feat\s/g) !== -1) {
     term = term.replace('feat', '').trim();
     term = camelize(term);
     term = term.replace(/\s/g, '');
